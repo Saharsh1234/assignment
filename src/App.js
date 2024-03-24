@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import CorouselCustom from './components/CorouselCustom';
 
 function App() {
+
+  const items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Navbar />
+  
+        {/* <Carousel items={items} initialActive={0} /> */}
+        <CorouselCustom />
     </div>
   );
 }

@@ -2,37 +2,124 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+/* body {
+    padding-top: 1em;
+
+    font-family: 'Nunito', sans-serif;
+} */
+
+.basedOn {
+    text-align: center;
+    font-size: 1.2em;
+    color: #FFF;
+}
+.basedOn a, .basedOn a:visited, .basedOn a:hover, .basedOn a:active {
+    color: #FFEB3B;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#carousel {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    /* left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.arrow {
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    background-color: #673AB7;
+    text-align: center;
+    font-size: 2em;
+    cursor: pointer;
+    line-height: 30px;
+    z-index: 1000;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.arrow i {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+.arrow:hover {
+    background-color: #512DA8;
+    color: #FFEB3B;
+}
+.arrow-right {
+    right: 0;
+}
+.arrow-left {
+    left: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.item {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: box-shadow 1s, height 250ms, width 250ms, left 1s, margin-top 1s, line-height 250ms, background-color 1s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* For each level, you will need to manually replace the variable-based values with static values */
+.level-2, .level2 {
+    box-shadow: -0.1em 0.1em 0.2em #212121;
+    /* Replace with calculated values */
+    aspect-ratio: 16/9;
+    width: 17%; /* 25% - 8% */
+    line-height: 72%; /* Same as height */
+    /* Background color and left position must be manually set for each */
+}
+.level-1, .level1 {
+    box-shadow: -0.2em 0.2em 0.4em #212121;
+    /* Replace with calculated values */
+    aspect-ratio: 16/9;
+    width: 23%; /* 25% - 2% */
+    line-height: 78%; /* Same as height */
+    /* Background color and left position must be manually set for each */
+}
+/* Repeat for other levels, adjusting values accordingly */
+
+/* Adjustments for specific levels */
+.level-2 {
+    background-color: #228291;
+    left: 15%;
+}
+.level-1 {
+    background-color: #6796E5;
+    left: 30%;
+}
+.level0 {
+    box-shadow: 0 0.4em 0.8em #212121;
+    /* height: 85%; 80% + 5% */
+    width: 30%; /* 25% + 5% */
+    aspect-ratio: 16/9;
+    line-height: 85%; /* Same as height */
+    background-color: #4EC9E1;
+    left: 50%;
+}
+.level1 {
+    background-color: #6796E5;
+    left: 70%;
+}
+.level2 {
+    background-color: #228291;
+    left: 85%;
+}
+
+.noselect {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
